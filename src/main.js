@@ -48,3 +48,34 @@ function typeEffect() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeEffect, 1000);
 });
+
+// --- Logika Menu Mobile ---
+const mobileBtn = document.getElementById('mobile-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.getElementById('navbar');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+mobileBtn.addEventListener('click', () => {
+    // Membuka atau menutup menu
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+    
+    // Mengubah bentuk navbar dari bulat (pil) menjadi kotak bersudut tumpul saat terbuka
+    if (mobileMenu.classList.contains('flex')) {
+        navbar.classList.remove('rounded-full');
+        navbar.classList.add('rounded-2xl');
+    } else {
+        navbar.classList.add('rounded-full');
+        navbar.classList.remove('rounded-2xl');
+    }
+});
+
+// Menutup menu otomatis saat salah satu link diklik
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        navbar.classList.add('rounded-full');
+        navbar.classList.remove('rounded-2xl');
+    });
+});
