@@ -6,8 +6,8 @@
     <title>Adhika Dwiki Septian | Portfolio</title>
     <!-- Mengimpor font Inter dari Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/web-portofolio/assets/index-cCOplYiU.js"></script>
-  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-6QkluBJ7.css">
+  <script type="module" crossorigin src="/web-portofolio/assets/index-DWVPCC0X.js"></script>
+  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-Bd0KGIya.css">
 </head>
 <body class="antialiased selection:bg-cyan-500 selection:text-white">
 
@@ -15,21 +15,34 @@
     <div class="space-bg"></div>
 
     <!-- Navigasi -->
-    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-2xl bg-white/5 backdrop-blur-lg border border-white/10 rounded-full px-6 py-4 flex justify-between items-center z-50 shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300">
-        <div class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-            ADS.
+    <nav id="navbar" class="fixed top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-2xl bg-white/5 backdrop-blur-lg border border-white/10 rounded-full px-6 py-4 z-50 shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300">
+        <!-- Baris Utama (Logo & Tombol) -->
+        <div class="flex justify-between items-center w-full">
+            <div class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                ADS.
+            </div>
+            <!-- Menu Desktop -->
+            <ul class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
+                <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
+                <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+            </ul>
+            <!-- Tombol Mobile -->
+            <button id="mobile-btn" class="md:hidden text-gray-300 hover:text-cyan-400 focus:outline-none transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
-        <ul class="flex space-x-6 text-sm font-medium text-gray-300 hidden md:flex">
-            <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
-            <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a></li>
-            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+        
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <ul id="mobile-menu" class="hidden flex-col space-y-4 mt-4 pt-4 border-t border-white/10 text-sm font-medium text-gray-300 md:hidden">
+            <li><a href="#home" class="block hover:text-cyan-400 transition-colors mobile-link">Home</a></li>
+            <li><a href="#about" class="block hover:text-cyan-400 transition-colors mobile-link">About</a></li>
+            <li><a href="#portfolio" class="block hover:text-cyan-400 transition-colors mobile-link">Portfolio</a></li>
+            <li><a href="#contact" class="block hover:text-cyan-400 transition-colors mobile-link">Contact</a></li>
         </ul>
-        <div class="md:hidden text-gray-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </div>
     </nav>
 
     <!-- Hero Section -->
