@@ -1,201 +1,342 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhika Dwiki Septian | Portfolio</title>
-    <!-- Mengimpor font Inter dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adhika Dwiki Septian — Creative Web & Frontend Developer building sleek, interactive and modern web experiences." />
+    <title>Adhika Dwiki Septian | Creative Web & Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-<body class="antialiased selection:bg-cyan-500 selection:text-white">
+<body class="antialiased selection:bg-yellow-400 selection:text-black">
 
-    <!-- Latar Belakang Bintang -->
-    <div class="space-bg"></div>
+    <!-- Latar belakang -->
+    <div class="page-bg"></div>
+    <div class="glow-orb glow-orb--one"></div>
+    <div class="glow-orb glow-orb--two"></div>
 
     <!-- Navigasi -->
-    <nav id="navbar" class="fixed top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-2xl bg-white/5 backdrop-blur-lg border border-white/10 rounded-full px-6 py-4 z-50 shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300">
-        <!-- Baris Utama (Logo & Tombol) -->
+    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
         <div class="flex justify-between items-center w-full">
-            <div class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                ADS.
-            </div>
+            <a href="#home" class="text-lg font-bold tracking-tight text-white font-display">
+                adhika<span class="text-yellow-400">.</span>
+            </a>
+
             <!-- Menu Desktop -->
-            <ul class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
-                <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
-                <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
-                <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a></li>
-                <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+            <ul class="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-400">
+                <li><a href="#home" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Home</a></li>
+                <li><a href="#skills" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Skills</a></li>
+                <li><a href="#portfolio" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Work</a></li>
+                <li><a href="#services" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Services</a></li>
             </ul>
-            <!-- Tombol Mobile -->
-            <button id="mobile-btn" class="md:hidden text-gray-300 hover:text-cyan-400 focus:outline-none transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_25px_rgba(250,204,21,0.45)]">
+                    Contact me
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                </a>
+
+                <!-- Tombol Mobile -->
+                <button id="mobile-btn" aria-label="Toggle menu" class="md:hidden text-zinc-300 hover:text-yellow-400 focus:outline-none transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </button>
+            </div>
         </div>
-        
-        <!-- Menu Mobile (Tersembunyi secara default) -->
-        <ul id="mobile-menu" class="hidden flex-col space-y-4 mt-4 pt-4 border-t border-white/10 text-sm font-medium text-gray-300 md:hidden">
-            <li><a href="#home" class="block hover:text-cyan-400 transition-colors mobile-link">Home</a></li>
-            <li><a href="#about" class="block hover:text-cyan-400 transition-colors mobile-link">About</a></li>
-            <li><a href="#portfolio" class="block hover:text-cyan-400 transition-colors mobile-link">Portfolio</a></li>
-            <li><a href="#contact" class="block hover:text-cyan-400 transition-colors mobile-link">Contact</a></li>
+
+        <!-- Menu Mobile -->
+        <ul id="mobile-menu" class="hidden flex-col gap-1 mt-3 pt-3 border-t border-white/10 text-sm font-medium text-zinc-300 md:hidden">
+            <li><a href="#home" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Home</a></li>
+            <li><a href="#skills" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Skills</a></li>
+            <li><a href="#portfolio" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Work</a></li>
+            <li><a href="#services" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Services</a></li>
+            <li><a href="#contact" class="block px-3 py-2 rounded-lg text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Contact me</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
-        <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm font-semibold backdrop-blur-sm">
-            Welcome to my universe
-        </div>
-        
-        <h2 class="text-xl md:text-2xl text-gray-400 mb-2 font-light">Hi, I'm</h2>
-        
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 glow-text tracking-tight pb-2">
-            Adhika Dwiki Septian
-        </h1>
-        
-        <div class="text-2xl md:text-3xl font-semibold text-gray-200 h-10">
-            A <span id="typed-text" class="text-cyan-400 border-b-2 border-cyan-400 pb-1"></span><span class="cursor-blink text-cyan-400">|</span>
-        </div>
+    <!-- Hero -->
+    <section id="home" class="relative min-h-screen flex items-center px-6 pt-32 pb-20">
+        <div class="mx-auto w-full max-w-6xl grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div class="mt-12 flex space-x-4">
-            <a href="#contact" class="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium hover:from-cyan-500 hover:to-blue-600 transition-all shadow-[0_0_15px_rgba(8,145,178,0.5)]">
-                Let's Talk
-            </a>
-            <a href="#portfolio" class="px-8 py-3 rounded-full bg-white/10 border border-white/20 text-white font-medium hover:bg-white/20 backdrop-blur-sm transition-all">
-                View Work
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-24 px-6 md:px-12 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-white mb-2">About Me</h3>
-            <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full"></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-4 text-gray-300 leading-relaxed text-lg">
-                <p>I am an Information Systems Graduate with a deep passion for web development and technology. I love building digital experiences that live on the internet.</p>
-                <p>My journey in tech has equipped me with a strong foundation in both front-end and back-end technologies, allowing me to approach problems from a holistic perspective.</p>
+            <!-- Foto -->
+            <div class="order-2 md:order-1 flex justify-center">
+                <div class="relative w-full max-w-sm">
+                    <div class="absolute inset-0 scale-110 bg-yellow-400/25 blur-[70px] rounded-full"></div>
+                    <div class="absolute -inset-4 rotate-3 rounded-[2rem] border border-yellow-400/40"></div>
+                    <div class="absolute -inset-8 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
+                    <div class="hero-portrait relative overflow-hidden rounded-[1.75rem] border-2 border-yellow-400/70 bg-yellow-400 shadow-[0_0_60px_rgba(250,204,21,0.35)]">
+                        <div class="portrait-grid"></div>
+                        <span class="portrait-corner tl"></span>
+                        <span class="portrait-corner tr"></span>
+                        <span class="portrait-corner bl"></span>
+                        <span class="portrait-corner br"></span>
+                        <div class="portrait-inner">
+                            <span class="portrait-tag">&lt;developer /&gt;</span>
+                            <span class="portrait-initials">ADS</span>
+                            <span class="portrait-name">Adhika Dwiki Septian</span>
+                            <span class="portrait-role">Creative Web &amp; Fullstack Developer</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bg-[#0b0a1a]/80 backdrop-blur-md border border-gray-800 p-8 rounded-2xl shadow-2xl relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-                <h4 class="text-xl font-semibold text-white mb-6">Tech Arsenal</h4>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex items-center space-x-3 bg-white/5 border border-white/10 p-3 rounded-lg hover:bg-white/10 transition-colors group">
-                        <div class="w-8 h-8 rounded bg-red-500/20 text-red-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">CI</div>
-                        <span class="font-medium text-gray-200">CodeIgniter 3</span>
-                    </div>
-                    <div class="flex items-center space-x-3 bg-white/5 border border-white/10 p-3 rounded-lg hover:bg-white/10 transition-colors group">
-                        <div class="w-8 h-8 rounded bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">TW</div>
-                        <span class="font-medium text-gray-200">Tailwind CSS</span>
-                    </div>
-                    <div class="flex items-center space-x-3 bg-white/5 border border-white/10 p-3 rounded-lg hover:bg-white/10 transition-colors group">
-                        <div class="w-8 h-8 rounded bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">BS</div>
-                        <span class="font-medium text-gray-200">Bootstrap</span>
-                    </div>
-                    <div class="flex items-center space-x-3 bg-white/5 border border-white/10 p-3 rounded-lg hover:bg-white/10 transition-colors group">
-                        <div class="w-8 h-8 rounded bg-yellow-500/20 text-yellow-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">Py</div>
-                        <span class="font-medium text-gray-200">Python</span>
-                    </div>
+
+            <!-- Teks -->
+            <div class="order-1 md:order-2 text-center md:text-left">
+                <p class="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-yellow-400 mb-5">
+                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400 animate-pulse"></span>
+                    Hi! I'm Adhika
+                </p>
+
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-white mb-6">
+                    Creative Web &<br />
+                    <span class="text-yellow-400">Frontend Developer<span class="cursor-blink text-yellow-400">|</span></span>
+                </h1>
+
+                <p class="text-zinc-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-4">
+                    I build sleek, interactive, and modern web applications that turn ideas into powerful digital experiences.
+                </p>
+
+                <p class="text-sm text-zinc-500 mb-8 h-6">
+                    Currently crafting as a <span id="typed-text" class="text-yellow-400 font-medium"></span>
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)]">
+                        Contact Me
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                        My Work
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-24 px-6 md:px-12 bg-black/40 border-t border-gray-800">
-        <div class="max-w-5xl mx-auto text-center">
-             <h3 class="text-3xl font-bold text-white mb-2">Projects</h3>
-             <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full mb-12"></div>
-             
-             <!-- Grid Kartu Proyek -->
-             <div class="grid md:grid-cols-2 gap-8 text-left mt-12">
-                 
-                 <!-- Proyek 1: Sistem Rekomendasi -->
-                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm group shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                     <div class="flex justify-between items-start mb-4">
-                         <div class="w-12 h-12 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 flex items-center justify-center text-2xl shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-                             🤖
-                         </div>
-                         <span class="text-xs font-medium px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-400">2025 - 2026</span>
-                     </div>
-                     <h4 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">Sistem Rekomendasi (Skripsi)</h4>
-                     <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                         Merancang dan mengeksekusi skrip klasifikasi menggunakan bahasa pemrograman Python. Melakukan analisis data dan evaluasi sistem menggunakan algoritma TF-IDF, Cosine Similarity, dan Precision@K, serta menyusun dokumentasi teknis secara komprehensif.
-                     </p>
-                     <div class="flex flex-wrap gap-2 mt-auto">
-                         <span class="text-xs font-medium px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">Python</span>
-                         <span class="text-xs font-medium px-2.5 py-1 bg-purple-500/10 text-purple-300 rounded border border-purple-500/20">Data Analysis</span>
-                         <span class="text-xs font-medium px-2.5 py-1 bg-blue-500/10 text-blue-300 rounded border border-blue-500/20">Machine Learning</span>
-                     </div>
-                 </div>
+    <!-- Skills -->
+    <section id="skills" class="relative py-24 px-6">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <p class="eyebrow">My Expertise</p>
+                <h2 class="section-title">Skills & <span class="accent">Technologies</span></h2>
+            </div>
 
-                 <!-- Proyek 2: Aplikasi POS -->
-                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 backdrop-blur-sm group shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                     <div class="flex justify-between items-start mb-4">
-                         <div class="w-12 h-12 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl shadow-[0_0_10px_rgba(16,185,129,0.2)]">
-                             💻
-                         </div>
-                         <span class="text-xs font-medium px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-400">2024</span>
-                     </div>
-                     <h4 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Aplikasi Point of Sale (POS)</h4>
-                     <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                         Membangun aplikasi kasir (POS) dan tata letak landing page yang diimplementasikan pada bisnis F&B (angkringan). Mengembangkan antarmuka dan sistem backend yang menerapkan siklus pengembangan perangkat lunak (SDLC) secara utuh.
-                     </p>
-                     <div class="flex flex-wrap gap-2 mt-auto">
-                         <span class="text-xs font-medium px-2.5 py-1 bg-red-500/10 text-red-300 rounded border border-red-500/20">CodeIgniter 3</span>
-                         <span class="text-xs font-medium px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded border border-cyan-500/20">Tailwind CSS</span>
-                         <span class="text-xs font-medium px-2.5 py-1 bg-purple-500/10 text-purple-300 rounded border border-purple-500/20">Bootstrap</span>
-                     </div>
-                 </div>
+            <!-- Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="skill-tab is-active" data-filter="all">✦ All</button>
+                <button class="skill-tab" data-filter="frontend">⚡ Frontend</button>
+                <button class="skill-tab" data-filter="backend">⚙ Backend</button>
+                <button class="skill-tab" data-filter="tools">⛭ Tools & Others</button>
+            </div>
 
-             </div>
+            <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon bg-yellow-400/10 text-yellow-400 border-yellow-400/20">JS</div>
+                    <span class="tech-name">JavaScript</span>
+                </div>
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon bg-cyan-400/10 text-cyan-300 border-cyan-400/20">⚛</div>
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon bg-sky-400/10 text-sky-300 border-sky-400/20">≈</div>
+                    <span class="tech-name">Tailwind CSS</span>
+                </div>
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon bg-orange-400/10 text-orange-300 border-orange-400/20">&lt;/&gt;</div>
+                    <span class="tech-name">HTML & CSS</span>
+                </div>
+                <div class="tech-card" data-category="backend">
+                    <div class="tech-icon bg-red-500/10 text-red-400 border-red-500/20">CI</div>
+                    <span class="tech-name">CodeIgniter 3</span>
+                </div>
+                <div class="tech-card" data-category="backend">
+                    <div class="tech-icon bg-emerald-400/10 text-emerald-300 border-emerald-400/20">Py</div>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon bg-purple-400/10 text-purple-300 border-purple-400/20">B</div>
+                    <span class="tech-name">Bootstrap</span>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon bg-zinc-500/10 text-zinc-300 border-zinc-500/20">⑂</div>
+                    <span class="tech-name">Git & GitHub</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 text-center relative z-10">
-        <h3 class="text-3xl font-bold text-white mb-6">Get In Touch</h3>
-        <p class="text-gray-400 max-w-lg mx-auto mb-8 leading-relaxed">
-            Saya saat ini sangat terbuka untuk peluang kerja baru, diskusi seputar teknologi, atau kolaborasi proyek. Baik Anda memiliki pertanyaan atau sekadar ingin menyapa, jangan ragu untuk menghubungi saya!
-        </p>
-        
-        <!-- Tombol Email yang sudah terintegrasi -->
-        <a href="mailto:adhikaseptian5@gmail.com?subject=Halo%20Adhika!%20(Dari%20Web%20Portofolio)" 
-           class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white/5 border border-gray-700 text-white font-semibold hover:bg-cyan-500/10 hover:border-cyan-500 transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-            </svg>
-            Say Hello
-        </a>
+    <!-- Portfolio -->
+    <section id="portfolio" class="relative py-24 px-6">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <p class="eyebrow">My Portfolio</p>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            </div>
 
-        <!-- Opsional: Tautan ke LinkedIn jika nanti sudah ada -->
-        <!-- Opsional: Tautan ke LinkedIn dan GitHub -->
-        <div class="mt-8">
-            <p class="text-sm text-gray-500">Atau temukan saya di platform lain:</p>
-            <div class="flex justify-center gap-4 mt-3">
-                <!-- Tautan LinkedIn (Masih kosong, bisa diisi nanti) -->
-                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">LinkedIn</a>
-                
-                <!-- Tautan GitHub yang sudah terhubung -->
-                <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition-colors">GitHub</a>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Proyek 1 -->
+                <article class="project-card group">
+                    <div class="project-thumb bg-linear-to-br from-blue-600/30 via-indigo-600/10 to-transparent">
+                        <div class="thumb-badge bg-blue-500/20 text-blue-300 border-blue-400/30">dY"</div>
+                        <span class="thumb-year">2025 — 2026</span>
+                        <div class="thumb-glyph text-blue-300/80">ML</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Sistem Rekomendasi (Skripsi)</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+                            Merancang skrip klasifikasi menggunakan Python, melakukan analisis data dan evaluasi sistem dengan TF-IDF, Cosine Similarity, serta Precision@K.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyek 2 -->
+                <article class="project-card group">
+                    <div class="project-thumb bg-linear-to-br from-emerald-600/30 via-teal-600/10 to-transparent">
+                        <div class="thumb-badge bg-emerald-500/20 text-emerald-300 border-emerald-400/30">POS</div>
+                        <span class="thumb-year">2024</span>
+                        <div class="thumb-glyph text-emerald-300/80">POS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Aplikasi Point of Sale (POS)</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+                            Membangun aplikasi kasir dan landing page untuk bisnis F&B, mengembangkan antarmuka serta sistem backend dengan siklus SDLC utuh.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">CodeIgniter 3</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="relative py-24 px-6">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <p class="eyebrow">What I Do</p>
+                <h2 class="section-title">My <span class="accent">Services</span></h2>
+                <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Transforming ideas into powerful digital solutions with creativity and precision.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="service-card group">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Web Development</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Building responsive, fast, and scalable websites using modern technologies like CodeIgniter, Tailwind CSS, and JavaScript.</p>
+                </div>
+
+                <div class="service-card group">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">UI / UX Design</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Creating intuitive and beautiful user interfaces with a focus on user experience and modern design principles.</p>
+                </div>
+
+                <div class="service-card group">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Data & Machine Learning</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Analyzing data and building recommendation or classification systems with Python and modern ML techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="relative py-24 px-6">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <p class="eyebrow">Get In Touch</p>
+                <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Info -->
+                <div class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8">
+                    <h3 class="text-xl font-bold text-white mb-3">Let's build something great together.</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-8">
+                        Saya terbuka untuk peluang kerja baru, diskusi seputar teknologi, atau kolaborasi proyek. Jangan ragu untuk menghubungi saya!
+                    </p>
+
+                    <a href="mailto:adhikaseptian5@gmail.com?subject=Halo%20Adhika!%20(Dari%20Web%20Portofolio)" class="contact-row group">
+                        <span class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                        </span>
+                        <span>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-500">Email</span>
+                            <span class="block text-sm text-zinc-200 group-hover:text-yellow-400 transition-colors">adhikaseptian5@gmail.com</span>
+                        </span>
+                    </a>
+
+                    <div class="contact-row">
+                        <span class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </span>
+                        <span>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-500">Location</span>
+                            <span class="block text-sm text-zinc-200">Indonesia</span>
+                        </span>
+                    </div>
+
+                    <div class="contact-row">
+                        <span class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                        </span>
+                        <span>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-500">GitHub</span>
+                            <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="block text-sm text-zinc-200 hover:text-yellow-400 transition-colors">github.com/adhika26</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="contact-form" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8 space-y-5">
+                    <div>
+                        <label for="name" class="form-label">Your Name</label>
+                        <input id="name" name="name" type="text" required placeholder="John Doe" class="form-input" />
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Your Email</label>
+                        <input id="email" name="email" type="email" required placeholder="john@example.com" class="form-input" />
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.45)]">
+                        Send Message
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 text-center border-t border-gray-800/50 text-gray-500 text-sm bg-black/50">
-        <p>&copy; 2026 Adhika Dwiki Septian. Built with 💻 & ☕.</p>
+    <footer class="relative border-t border-white/5 py-8 px-6">
+        <div class="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+            <p>&copy; <span id="year">2026</span> Adhika Dwiki Septian. All rights reserved.</p>
+            <div class="flex items-center gap-5">
+                <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">GitHub</a>
+                <a href="mailto:adhikaseptian5@gmail.com" class="hover:text-yellow-400 transition-colors">Email</a>
+                <a href="#home" class="hover:text-yellow-400 transition-colors">Back to top ↑</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Pemanggilan script JS melalui Vite -->
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
