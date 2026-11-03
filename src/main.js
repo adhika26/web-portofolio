@@ -117,7 +117,7 @@ function initContactForm() {
 /* ---------- Scroll reveal ---------- */
 function initScrollReveal() {
     const revealTargets = document.querySelectorAll(
-        '#skills, #portfolio, #services, #contact, .tech-card, .project-card, .service-card'
+        '#skills, #portfolio, #certificates, #services, #contact, .tech-card, .project-card, .cert-card, .service-card'
     );
 
     revealTargets.forEach((el) => el.classList.add('reveal'));

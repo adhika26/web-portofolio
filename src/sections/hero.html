@@ -14,7 +14,14 @@
                         <span class="portrait-corner tr"></span>
                         <span class="portrait-corner bl"></span>
                         <span class="portrait-corner br"></span>
-                        <div class="portrait-inner">
+                        <img
+                            src="./profile/foto-profil.jpg"
+                            alt="Foto Adhika Dwiki Septian"
+                            class="profile-photo"
+                            onload="document.getElementById('portrait-fallback')?.classList.add('is-hidden-photo')"
+                            onerror="this.style.display='none'"
+                        />
+                        <div id="portrait-fallback" class="portrait-inner">
                             <span class="portrait-tag">&lt;developer /&gt;</span>
                             <span class="portrait-initials">ADS</span>
                             <span class="portrait-name">Adhika Dwiki Septian</span>
