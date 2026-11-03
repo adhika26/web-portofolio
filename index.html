@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/web-portofolio/assets/index-PO4SBRoz.js"></script>
-  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-DdVxdNVl.css">
+  <script type="module" crossorigin src="/web-portofolio/assets/index-B6ia6T2V.js"></script>
+  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-oV_aAxdp.css">
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
@@ -31,6 +31,7 @@
                 <li><a href="#home" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Home</a></li>
                 <li><a href="#skills" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Skills</a></li>
                 <li><a href="#portfolio" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Work</a></li>
+                <li><a href="#certificates" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Certificates</a></li>
                 <li><a href="#services" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Services</a></li>
             </ul>
 
@@ -52,6 +53,7 @@
             <li><a href="#home" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Home</a></li>
             <li><a href="#skills" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Skills</a></li>
             <li><a href="#portfolio" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Work</a></li>
+            <li><a href="#certificates" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Certificates</a></li>
             <li><a href="#services" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Services</a></li>
             <li><a href="#contact" class="block px-3 py-2 rounded-lg text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Contact me</a></li>
         </ul>
@@ -73,7 +75,14 @@
                         <span class="portrait-corner tr"></span>
                         <span class="portrait-corner bl"></span>
                         <span class="portrait-corner br"></span>
-                        <div class="portrait-inner">
+                        <img
+                            src="./profile/foto-profil.jpg"
+                            alt="Foto Adhika Dwiki Septian"
+                            class="profile-photo"
+                            onload="document.getElementById('portrait-fallback')?.classList.add('is-hidden-photo')"
+                            onerror="this.style.display='none'"
+                        />
+                        <div id="portrait-fallback" class="portrait-inner">
                             <span class="portrait-tag">&lt;developer /&gt;</span>
                             <span class="portrait-initials">ADS</span>
                             <span class="portrait-name">Adhika Dwiki Septian</span>
@@ -175,48 +184,204 @@
             <div class="text-center mb-14">
                 <p class="eyebrow">My Portfolio</p>
                 <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Real projects I designed and built end to end. Inspect the source code on GitHub.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Proyek 1 -->
                 <article class="project-card group">
-                    <div class="project-thumb bg-linear-to-br from-blue-600/30 via-indigo-600/10 to-transparent">
-                        <div class="thumb-badge bg-blue-500/20 text-blue-300 border-blue-400/30">dY"</div>
+                    <div class="project-media">
+                        <img src="./projects/sistem-rekomendasi.png" alt="Tampilan EksplorJogja - Sistem Rekomendasi Wisata Yogyakarta" loading="lazy" />
                         <span class="thumb-year">2025 — 2026</span>
-                        <div class="thumb-glyph text-blue-300/80">ML</div>
+                        <span class="thumb-badge bg-blue-500/20 text-blue-300 border-blue-400/30">Web App</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Sistem Rekomendasi (Skripsi)</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed mb-5">
-                            Merancang skrip klasifikasi menggunakan Python, melakukan analisis data dan evaluasi sistem dengan TF-IDF, Cosine Similarity, serta Precision@K.
+                    <div class="project-body">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">EksplorJogja — Sistem Rekomendasi Wisata</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Sistem rekomendasi wisata Yogyakarta berbasis content-based filtering dengan pembobotan TF-IDF, Cosine Similarity, dan pengurutan berdasarkan jarak Haversine.
                         </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag">Python</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Machine Learning</span>
+                        <ul class="project-contrib">
+                            <li>Membangun preprocessing teks, TF-IDF, dan Cosine Similarity dari nol.</li>
+                            <li>Menambahkan filter jarak Haversine dan sinkronisasi data OpenStreetMap.</li>
+                            <li>Membuat dashboard admin serta halaman pencarian wisata yang responsif.</li>
+                        </ul>
+                        <div class="project-metrics">
+                            <span class="metric"><strong>912</strong> destinasi wisata</span>
+                            <span class="metric"><strong>3</strong> lapisan ranking</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="tag">CodeIgniter 3</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">TF-IDF</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/adhika26/sistem-rekomendasi-wisata-yogyakarta" target="_blank" rel="noopener noreferrer" class="btn-code">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                                View Code
+                            </a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Proyek 2 -->
                 <article class="project-card group">
-                    <div class="project-thumb bg-linear-to-br from-emerald-600/30 via-teal-600/10 to-transparent">
-                        <div class="thumb-badge bg-emerald-500/20 text-emerald-300 border-emerald-400/30">POS</div>
-                        <span class="thumb-year">2024</span>
-                        <div class="thumb-glyph text-emerald-300/80">POS</div>
+                    <div class="project-media">
+                        <img src="./projects/angkringan-pos.png" alt="Tampilan aplikasi Angkringan POS" loading="lazy" />
+                        <span class="thumb-year">2026</span>
+                        <span class="thumb-badge bg-emerald-500/20 text-emerald-300 border-emerald-400/30">Web App</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Aplikasi Point of Sale (POS)</h3>
-                        <p class="text-sm text-zinc-400 leading-relaxed mb-5">
-                            Membangun aplikasi kasir dan landing page untuk bisnis F&B, mengembangkan antarmuka serta sistem backend dengan siklus SDLC utuh.
+                    <div class="project-body">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Angkringan POS</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Aplikasi kasir dan pembukuan untuk UMKM angkringan: transaksi tunai/QRIS, stok otomatis, dashboard laba, laporan, serta hutang &amp; piutang.
                         </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag">CodeIgniter 3</span>
+                        <ul class="project-contrib">
+                            <li>Membangun alur kasir, keranjang, pembayaran, dan pengurangan stok otomatis.</li>
+                            <li>Membuat dashboard penjualan 7 hari, rekap laba, dan export laporan ke Excel.</li>
+                            <li>Menerapkan autentikasi Supabase dengan role Owner/Kasir dan Row Level Security.</li>
+                        </ul>
+                        <div class="project-metrics">
+                            <span class="metric"><strong>2</strong> role pengguna</span>
+                            <span class="metric"><strong>QRIS</strong> &amp; tunai</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="tag">Next.js 16</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Supabase</span>
                             <span class="tag">Tailwind CSS</span>
-                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/adhika26/angkringan_pos" target="_blank" rel="noopener noreferrer" class="btn-code">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                                View Code
+                            </a>
                         </div>
                     </div>
                 </article>
+
+                <!-- Proyek 3 -->
+                <article class="project-card group">
+                    <div class="project-media">
+                        <img src="./projects/angkringan-east.png" alt="Tampilan landing page Angkringan East Corner" loading="lazy" />
+                        <span class="thumb-year">2026</span>
+                        <span class="thumb-badge bg-orange-500/20 text-orange-300 border-orange-400/30">Landing</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Angkringan East Corner</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Landing page untuk bisnis kuliner angkringan dengan tampilan modern, katalog menu, profil, dan ajakan kontak/pemesanan.
+                        </p>
+                        <ul class="project-contrib">
+                            <li>Merancang hero section, katalog menu, dan section profil yang responsif.</li>
+                            <li>Membangun seluruh halaman dengan HTML, CSS, dan JavaScript tanpa framework.</li>
+                        </ul>
+                        <div class="project-metrics">
+                            <span class="metric"><strong>100%</strong> responsif</span>
+                            <span class="metric"><strong>0</strong> dependensi</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/adhika26/angkringan-east-corner" target="_blank" rel="noopener noreferrer" class="btn-code">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+        <!-- Certificates -->
+    <section id="certificates" class="relative py-24 px-6">
+        <div class="mx-auto max-w-6xl">
+            <div class="text-center mb-14">
+                <p class="eyebrow">Credentials</p>
+                <h2 class="section-title">My <span class="accent">Certificates</span></h2>
+                <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Continuous learning backed by verified certifications. Click a card to view the certificate.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <!-- Certificate 1 -->
+                <a href="./certificates/PythonEssentials1Update20261026-20-tg6lws.pdf" target="_blank" rel="noopener" class="cert-card group">
+                    <div class="cert-top">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">Python Essentials 1</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">Foundational Python programming: syntax, data types, control flow, functions, and problem solving.</p>
+                    <div class="cert-footer">
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                        <span class="cert-view">
+                            View PDF
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Certificate 2 -->
+                <a href="./certificates/JavaScriptEssentials1Update20261026-20-s7i95m.pdf" target="_blank" rel="noopener" class="cert-card group">
+                    <div class="cert-top">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">JavaScript Essentials 1</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">Core JavaScript concepts: variables, functions, DOM interaction, and modern ES features.</p>
+                    <div class="cert-footer">
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                        <span class="cert-view">
+                            View PDF
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Certificate 3 -->
+                <a href="./certificates/sertifikat_course_dicoding_Adhika_pyhton.pdf" target="_blank" rel="noopener" class="cert-card group">
+                    <div class="cert-top">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">Belajar Dasar Pemrograman Python</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">Structured Python course covering fundamentals, data structures, and hands-on coding exercises.</p>
+                    <div class="cert-footer">
+                        <span class="cert-issuer">Dicoding</span>
+                        <span class="cert-view">
+                            View PDF
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Certificate 4 -->
+                <a href="./certificates/sertifikat_course_dicoding_Adhika_javascript.pdf" target="_blank" rel="noopener" class="cert-card group">
+                    <div class="cert-top">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">Belajar Dasar Pemrograman JavaScript</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">Structured JavaScript course covering language fundamentals and interactive web programming.</p>
+                    <div class="cert-footer">
+                        <span class="cert-issuer">Dicoding</span>
+                        <span class="cert-view">
+                            View PDF
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
