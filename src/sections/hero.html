@@ -1,5 +1,5 @@
     <!-- Hero -->
-    <section id="home" class="relative min-h-screen flex items-center px-6 pt-32 pb-20">
+    <section id="home" class="relative min-h-screen flex items-center px-6 pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div class="mx-auto w-full max-w-6xl grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <!-- Foto -->
@@ -7,21 +7,14 @@
                 <div class="relative w-full max-w-sm">
                     <div class="absolute inset-0 scale-110 bg-yellow-400/25 blur-[70px] rounded-full"></div>
                     <div class="absolute -inset-4 rotate-3 rounded-[2rem] border border-yellow-400/40"></div>
-                    <div class="absolute -inset-8 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
+                    <div class="absolute -inset-6 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
                     <div class="hero-portrait relative overflow-hidden rounded-[1.75rem] border-2 border-yellow-400/70 bg-yellow-400 shadow-[0_0_60px_rgba(250,204,21,0.35)]">
                         <div class="portrait-grid"></div>
                         <span class="portrait-corner tl"></span>
                         <span class="portrait-corner tr"></span>
                         <span class="portrait-corner bl"></span>
                         <span class="portrait-corner br"></span>
-                        <img
-                            src="./profile/foto-profil.jpg"
-                            alt="Foto Adhika Dwiki Septian"
-                            class="profile-photo"
-                            onload="document.getElementById('portrait-fallback')?.classList.add('is-hidden-photo')"
-                            onerror="this.style.display='none'"
-                        />
-                        <div id="portrait-fallback" class="portrait-inner">
+                        <div class="portrait-inner">
                             <span class="portrait-tag">&lt;developer /&gt;</span>
                             <span class="portrait-initials">ADS</span>
                             <span class="portrait-name">Adhika Dwiki Septian</span>
@@ -34,7 +27,7 @@
             <!-- Teks -->
             <div class="order-1 md:order-2 text-center md:text-left">
                 <p class="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-yellow-400 mb-5">
-                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400 animate-pulse"></span>
+                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
                     Hi! I'm Adhika
                 </p>
 
@@ -51,18 +44,18 @@
                     Currently crafting as a <span id="typed-text" class="text-yellow-400 font-medium"></span>
                 </p>
 
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                    <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)]">
+                <div class="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:justify-start">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] sm:px-7">
                         Contact Me
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
                     </a>
-                    <a href="#portfolio" class="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                    <a href="#portfolio" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-zinc-700 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400 sm:px-7">
                         My Work
                     </a>
-                    <div class="cv-dropdown relative" data-cv-dropdown>
-                        <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-hero" class="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                    <div class="cv-dropdown relative col-span-2 sm:col-span-1" data-cv-dropdown>
+                        <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-hero" class="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-zinc-700 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400 sm:w-auto sm:px-7">
                             Download CV
-                            <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="cv-menu-hero" data-cv-menu class="cv-menu hidden">
                             <a href="./cv/cv-id.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">

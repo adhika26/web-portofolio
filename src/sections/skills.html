@@ -1,17 +1,17 @@
     <!-- Skills -->
-    <section id="skills" class="relative py-24 px-6">
+    <section id="skills" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">My Expertise</p>
                 <h2 class="section-title">Skills & <span class="accent">Technologies</span></h2>
             </div>
 
             <!-- Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="skill-tab is-active" data-filter="all">✦ All</button>
-                <button class="skill-tab" data-filter="frontend">⚡ Frontend</button>
-                <button class="skill-tab" data-filter="backend">⚙ Backend</button>
-                <button class="skill-tab" data-filter="tools">⛭ Tools & Others</button>
+            <div class="grid grid-cols-2 gap-2 mb-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-3 md:mb-12" role="group" aria-label="Filter skills">
+                <button type="button" class="skill-tab is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="skill-tab" data-filter="frontend" aria-pressed="false">Frontend</button>
+                <button type="button" class="skill-tab" data-filter="backend" aria-pressed="false">Backend</button>
+                <button type="button" class="skill-tab" data-filter="tools" aria-pressed="false">Tools &amp; Others</button>
             </div>
 
             <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -20,11 +20,11 @@
                     <span class="tech-name">JavaScript</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon bg-cyan-400/10 text-cyan-300 border-cyan-400/20">⚛</div>
+                    <div class="tech-icon bg-cyan-400/10 text-cyan-300 border-cyan-400/20" aria-hidden="true">⚛</div>
                     <span class="tech-name">React</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon bg-sky-400/10 text-sky-300 border-sky-400/20">≈</div>
+                    <div class="tech-icon bg-sky-400/10 text-sky-300 border-sky-400/20" aria-hidden="true">TW</div>
                     <span class="tech-name">Tailwind CSS</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
@@ -44,7 +44,7 @@
                     <span class="tech-name">Bootstrap</span>
                 </div>
                 <div class="tech-card" data-category="tools">
-                    <div class="tech-icon bg-zinc-500/10 text-zinc-300 border-zinc-500/20">⑂</div>
+                    <div class="tech-icon bg-zinc-500/10 text-zinc-300 border-zinc-500/20" aria-hidden="true">Git</div>
                     <span class="tech-name">Git & GitHub</span>
                 </div>
             </div>

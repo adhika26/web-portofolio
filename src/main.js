@@ -56,6 +56,7 @@ function initMobileMenu() {
         mobileMenu.classList.remove('flex');
         navbar.classList.add('rounded-full');
         navbar.classList.remove('rounded-2xl');
+        mobileBtn?.setAttribute('aria-expanded', 'false');
     }
 
     mobileBtn?.addEventListener('click', () => {
@@ -66,13 +67,28 @@ function initMobileMenu() {
         if (mobileMenu.classList.contains('flex')) {
             navbar.classList.remove('rounded-full');
             navbar.classList.add('rounded-2xl');
+            mobileBtn.setAttribute('aria-expanded', 'true');
         } else {
             navbar.classList.add('rounded-full');
             navbar.classList.remove('rounded-2xl');
+            mobileBtn.setAttribute('aria-expanded', 'false');
         }
     });
 
     mobileLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileMenu?.classList.contains('flex')) {
+            closeMobileMenu();
+            mobileBtn?.focus();
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!mobileMenu?.classList.contains('flex')) return;
+        if (navbar?.contains(event.target) || mobileBtn?.contains(event.target)) return;
+        closeMobileMenu();
+    });
 }
 
 /* ---------- Skill filtering ---------- */
@@ -82,8 +98,12 @@ function initSkillFilter() {
 
     skillTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
-            skillTabs.forEach((t) => t.classList.remove('is-active'));
+            skillTabs.forEach((t) => {
+                t.classList.remove('is-active');
+                t.setAttribute('aria-pressed', 'false');
+            });
             tab.classList.add('is-active');
+            tab.setAttribute('aria-pressed', 'true');
 
             const filter = tab.dataset.filter;
 
@@ -164,7 +184,7 @@ function initContactForm() {
 /* ---------- Scroll reveal ---------- */
 function initScrollReveal() {
     const revealTargets = document.querySelectorAll(
-        '#skills, #portfolio, #certificates, #services, #contact, .tech-card, .project-card, .cert-card, .service-card'
+        '.tech-card, .project-card, .cert-card, .service-card'
     );
 
     revealTargets.forEach((el) => el.classList.add('reveal'));
@@ -203,4 +223,9 @@ initContactForm();
 initScrollReveal();
 setYear();
 
-setTimeout(typeEffect, 900);
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (prefersReducedMotion && typedTextElement) {
+    typedTextElement.textContent = roles[0];
+} else {
+    setTimeout(typeEffect, 900);
+}

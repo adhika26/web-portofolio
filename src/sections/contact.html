@@ -1,7 +1,7 @@
     <!-- Contact -->
-    <section id="contact" class="relative py-24 px-6">
+    <section id="contact" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">Get In Touch</p>
                 <h2 class="section-title">Contact <span class="accent">Me</span></h2>
             </div>
@@ -30,7 +30,7 @@
                         </span>
                         <span>
                             <span class="block text-xs uppercase tracking-wider text-zinc-500">Location</span>
-                            <span class="block text-sm text-zinc-200">Indonesia</span>
+                            <span class="block text-sm text-zinc-200">Klaten, Indonesia</span>
                         </span>
                     </div>
 
@@ -49,15 +49,15 @@
                 <form id="contact-form" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8 space-y-5">
                     <div>
                         <label for="name" class="form-label">Your Name</label>
-                        <input id="name" name="name" type="text" required placeholder="John Doe" class="form-input" />
+                        <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name" class="form-input" />
                     </div>
                     <div>
                         <label for="email" class="form-label">Your Email</label>
-                        <input id="email" name="email" type="email" required placeholder="john@example.com" class="form-input" />
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com" class="form-input" />
                     </div>
                     <div>
                         <label for="message" class="form-label">Your Message</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
+                        <textarea id="message" name="message" rows="4" required autocomplete="off" placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
                     </div>
                     <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.45)]">
                         Send Message

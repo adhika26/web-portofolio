@@ -12,6 +12,21 @@ html {
     scroll-behavior: smooth;
 }
 
+section[id] {
+    scroll-margin-top: 6.5rem;
+}
+
+a,
+button,
+[role="button"] {
+    cursor: pointer;
+}
+
+:where(a, button, [role="button"]):focus-visible {
+    outline: 2px solid #facc15;
+    outline-offset: 3px;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #050505;
@@ -74,24 +89,6 @@ body {
         linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
     background-size: 34px 34px;
     z-index: 0;
-}
-
-.portrait-inner.is-hidden-photo {
-    display: none;
-}
-
-.profile-photo {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transition: transform 0.5s ease;
-}
-.hero-portrait:hover .profile-photo {
-    transform: scale(1.03);
 }
 
 .portrait-inner {
@@ -202,6 +199,10 @@ body {
 
 /* ---------- Skills ---------- */
 .skill-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: #0d0d0d;
     color: #a1a1aa;
@@ -211,6 +212,7 @@ body {
     border-radius: 9999px;
     transition: all 0.25s ease;
     cursor: pointer;
+    white-space: nowrap;
 }
 .skill-tab:hover {
     border-color: rgba(250, 204, 21, 0.5);
@@ -368,6 +370,7 @@ body {
     justify-content: center;
     gap: 0.4rem;
     flex: 1 1 auto;
+    min-height: 2.75rem;
     padding: 0.6rem 1rem;
     border-radius: 0.6rem;
     font-size: 0.78rem;
@@ -656,6 +659,13 @@ body {
 }
 .cv-dropdown.is-open .cv-chevron {
     transform: rotate(180deg);
+}
+
+/* ---------- Footer ---------- */
+footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
 }
 
 /* ---------- Scroll reveal ---------- */
