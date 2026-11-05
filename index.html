@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adhika Dwiki Septian — Creative Web & Fullstack Developer building sleek, interactive and modern web experiences." />
+    <meta name="description" content="Adhika Dwiki Septian, Creative Web &amp; Fullstack Developer building sleek, interactive and modern web experiences." />
+    <meta name="theme-color" content="#050505" />
     <title>Adhika Dwiki Septian | Creative Web & Fullstack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/web-portofolio/assets/index-Bf24NCUV.js"></script>
-  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-H6IGwaHJ.css">
+  <script type="module" crossorigin src="/web-portofolio/assets/index-DbPCl_My.js"></script>
+  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-CihPyrWS.css">
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
 
@@ -20,14 +22,14 @@
     <div class="glow-orb glow-orb--two"></div>
 
         <!-- Navigasi -->
-    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
+    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
         <div class="flex justify-between items-center w-full">
             <a href="#home" class="text-lg font-bold tracking-tight text-white font-display">
                 adhika<span class="text-yellow-400">.</span>
             </a>
 
             <!-- Menu Desktop -->
-            <ul class="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-400">
+            <ul class="hidden lg:flex items-center gap-1 text-sm font-medium text-zinc-400">
                 <li><a href="#home" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Home</a></li>
                 <li><a href="#skills" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Skills</a></li>
                 <li><a href="#portfolio" class="px-4 py-2 rounded-full hover:text-white hover:bg-white/5 transition-colors">Work</a></li>
@@ -37,9 +39,9 @@
 
             <div class="flex items-center gap-2 sm:gap-3">
                 <div class="cv-dropdown relative" data-cv-dropdown>
-                    <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-navbar" class="inline-flex items-center gap-1.5 rounded-full border border-zinc-700 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                    <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-navbar" class="inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full border border-zinc-700 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
                         CV
-                        <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div id="cv-menu-navbar" data-cv-menu class="cv-menu hidden">
                         <a href="./cv/cv-id.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">
@@ -59,31 +61,33 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_25px_rgba(250,204,21,0.45)]">
-                    Contact me
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                <a href="#contact" class="hidden min-h-11 items-center gap-2 whitespace-nowrap rounded-full bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_25px_rgba(250,204,21,0.45)] sm:inline-flex">
+                    Contact Me
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
                 </a>
 
                 <!-- Tombol Mobile -->
-                <button id="mobile-btn" aria-label="Toggle menu" class="md:hidden text-zinc-300 hover:text-yellow-400 focus:outline-none transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <button id="mobile-btn" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false" class="flex h-11 w-11 -mr-2 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/5 hover:text-yellow-400 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
                 </button>
             </div>
         </div>
 
         <!-- Menu Mobile -->
-        <ul id="mobile-menu" class="hidden flex-col gap-1 mt-3 pt-3 border-t border-white/10 text-sm font-medium text-zinc-300 md:hidden">
-            <li><a href="#home" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Home</a></li>
-            <li><a href="#skills" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Skills</a></li>
-            <li><a href="#portfolio" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Work</a></li>
-            <li><a href="#certificates" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Certificates</a></li>
-            <li><a href="#services" class="block px-3 py-2 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Services</a></li>
-            <li><a href="#contact" class="block px-3 py-2 rounded-lg text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Contact me</a></li>
+        <ul id="mobile-menu" class="hidden flex-col gap-1 mt-3 pt-3 border-t border-white/10 text-sm font-medium text-zinc-300 lg:hidden">
+            <li><a href="#home" class="block px-3 py-3 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Home</a></li>
+            <li><a href="#skills" class="block px-3 py-3 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Skills</a></li>
+            <li><a href="#portfolio" class="block px-3 py-3 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Work</a></li>
+            <li><a href="#certificates" class="block px-3 py-3 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Certificates</a></li>
+            <li><a href="#services" class="block px-3 py-3 rounded-lg hover:text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Services</a></li>
+            <li><a href="#contact" class="block px-3 py-3 rounded-lg text-yellow-400 hover:bg-white/5 transition-colors mobile-link">Contact Me</a></li>
         </ul>
     </nav>
 
-        <!-- Hero -->
-    <section id="home" class="relative min-h-screen flex items-center px-6 pt-32 pb-20">
+
+    <main>
+            <!-- Hero -->
+    <section id="home" class="relative min-h-screen flex items-center px-6 pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div class="mx-auto w-full max-w-6xl grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <!-- Foto -->
@@ -91,21 +95,14 @@
                 <div class="relative w-full max-w-sm">
                     <div class="absolute inset-0 scale-110 bg-yellow-400/25 blur-[70px] rounded-full"></div>
                     <div class="absolute -inset-4 rotate-3 rounded-[2rem] border border-yellow-400/40"></div>
-                    <div class="absolute -inset-8 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
+                    <div class="absolute -inset-6 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
                     <div class="hero-portrait relative overflow-hidden rounded-[1.75rem] border-2 border-yellow-400/70 bg-yellow-400 shadow-[0_0_60px_rgba(250,204,21,0.35)]">
                         <div class="portrait-grid"></div>
                         <span class="portrait-corner tl"></span>
                         <span class="portrait-corner tr"></span>
                         <span class="portrait-corner bl"></span>
                         <span class="portrait-corner br"></span>
-                        <img
-                            src="./profile/foto-profil.jpg"
-                            alt="Foto Adhika Dwiki Septian"
-                            class="profile-photo"
-                            onload="document.getElementById('portrait-fallback')?.classList.add('is-hidden-photo')"
-                            onerror="this.style.display='none'"
-                        />
-                        <div id="portrait-fallback" class="portrait-inner">
+                        <div class="portrait-inner">
                             <span class="portrait-tag">&lt;developer /&gt;</span>
                             <span class="portrait-initials">ADS</span>
                             <span class="portrait-name">Adhika Dwiki Septian</span>
@@ -118,7 +115,7 @@
             <!-- Teks -->
             <div class="order-1 md:order-2 text-center md:text-left">
                 <p class="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-yellow-400 mb-5">
-                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400 animate-pulse"></span>
+                    <span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
                     Hi! I'm Adhika
                 </p>
 
@@ -135,18 +132,18 @@
                     Currently crafting as a <span id="typed-text" class="text-yellow-400 font-medium"></span>
                 </p>
 
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                    <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)]">
+                <div class="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:justify-start">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] sm:px-7">
                         Contact Me
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8m9 0v9"/></svg>
                     </a>
-                    <a href="#portfolio" class="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                    <a href="#portfolio" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-zinc-700 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400 sm:px-7">
                         My Work
                     </a>
-                    <div class="cv-dropdown relative" data-cv-dropdown>
-                        <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-hero" class="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400">
+                    <div class="cv-dropdown relative col-span-2 sm:col-span-1" data-cv-dropdown>
+                        <button type="button" data-cv-toggle aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-hero" class="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-zinc-700 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:border-yellow-400 hover:text-yellow-400 sm:w-auto sm:px-7">
                             Download CV
-                            <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="cv-chevron h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div id="cv-menu-hero" data-cv-menu class="cv-menu hidden">
                             <a href="./cv/cv-id.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">
@@ -170,20 +167,20 @@
         </div>
     </section>
 
-        <!-- Skills -->
-    <section id="skills" class="relative py-24 px-6">
+            <!-- Skills -->
+    <section id="skills" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">My Expertise</p>
                 <h2 class="section-title">Skills & <span class="accent">Technologies</span></h2>
             </div>
 
             <!-- Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="skill-tab is-active" data-filter="all">✦ All</button>
-                <button class="skill-tab" data-filter="frontend">⚡ Frontend</button>
-                <button class="skill-tab" data-filter="backend">⚙ Backend</button>
-                <button class="skill-tab" data-filter="tools">⛭ Tools & Others</button>
+            <div class="grid grid-cols-2 gap-2 mb-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-3 md:mb-12" role="group" aria-label="Filter skills">
+                <button type="button" class="skill-tab is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="skill-tab" data-filter="frontend" aria-pressed="false">Frontend</button>
+                <button type="button" class="skill-tab" data-filter="backend" aria-pressed="false">Backend</button>
+                <button type="button" class="skill-tab" data-filter="tools" aria-pressed="false">Tools &amp; Others</button>
             </div>
 
             <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -192,11 +189,11 @@
                     <span class="tech-name">JavaScript</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon bg-cyan-400/10 text-cyan-300 border-cyan-400/20">⚛</div>
+                    <div class="tech-icon bg-cyan-400/10 text-cyan-300 border-cyan-400/20" aria-hidden="true">⚛</div>
                     <span class="tech-name">React</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon bg-sky-400/10 text-sky-300 border-sky-400/20">≈</div>
+                    <div class="tech-icon bg-sky-400/10 text-sky-300 border-sky-400/20" aria-hidden="true">TW</div>
                     <span class="tech-name">Tailwind CSS</span>
                 </div>
                 <div class="tech-card" data-category="frontend">
@@ -216,17 +213,17 @@
                     <span class="tech-name">Bootstrap</span>
                 </div>
                 <div class="tech-card" data-category="tools">
-                    <div class="tech-icon bg-zinc-500/10 text-zinc-300 border-zinc-500/20">⑂</div>
+                    <div class="tech-icon bg-zinc-500/10 text-zinc-300 border-zinc-500/20" aria-hidden="true">Git</div>
                     <span class="tech-name">Git & GitHub</span>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Portfolio -->
-    <section id="portfolio" class="relative py-24 px-6">
+            <!-- Portfolio -->
+    <section id="portfolio" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">My Portfolio</p>
                 <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
                 <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Real projects I designed and built end to end. Inspect the source code on GitHub.</p>
@@ -236,12 +233,12 @@
                 <!-- Proyek 1 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/sistem-rekomendasi.png" alt="Tampilan EksplorJogja - Sistem Rekomendasi Wisata Yogyakarta" loading="lazy" />
-                        <span class="thumb-year">2025 — 2026</span>
+                        <img src="./projects/sistem-rekomendasi.png" alt="Tampilan EksplorJogja - Sistem Rekomendasi Wisata Yogyakarta" width="1280" height="800" loading="lazy" decoding="async" />
+                        <span class="thumb-year">2025 - 2026</span>
                         <span class="thumb-badge bg-blue-500/20 text-blue-300 border-blue-400/30">Web App</span>
                     </div>
                     <div class="project-body">
-                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">EksplorJogja — Sistem Rekomendasi Wisata</h3>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">EksplorJogja: Sistem Rekomendasi Wisata</h3>
                         <p class="text-sm text-zinc-400 leading-relaxed mb-4">
                             Sistem rekomendasi wisata Yogyakarta berbasis content-based filtering dengan pembobotan TF-IDF, Cosine Similarity, dan pengurutan berdasarkan jarak Haversine.
                         </p>
@@ -272,7 +269,7 @@
                 <!-- Proyek 2 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/angkringan-pos.png" alt="Tampilan aplikasi Angkringan POS" loading="lazy" />
+                        <img src="./projects/angkringan-pos.png" alt="Tampilan aplikasi Angkringan POS" width="1280" height="800" loading="lazy" decoding="async" />
                         <span class="thumb-year">2026</span>
                         <span class="thumb-badge bg-emerald-500/20 text-emerald-300 border-emerald-400/30">Web App</span>
                     </div>
@@ -308,7 +305,7 @@
                 <!-- Proyek 3 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/angkringan-east-revamp.png" alt="Tampilan hero landing page Angkringan East Corner versi revamp" loading="lazy" />
+                        <img src="./projects/angkringan-east-revamp.png" alt="Tampilan hero landing page Angkringan East Corner versi revamp" width="1280" height="800" loading="lazy" decoding="async" />
                         <span class="thumb-year">2026</span>
                         <span class="thumb-badge bg-orange-500/20 text-orange-300 border-orange-400/30">Landing</span>
                     </div>
@@ -344,10 +341,10 @@
         </div>
     </section>
 
-        <!-- Certificates -->
-    <section id="certificates" class="relative py-24 px-6">
+            <!-- Certificates -->
+    <section id="certificates" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">Credentials</p>
                 <h2 class="section-title">My <span class="accent">Certificates</span></h2>
                 <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Continuous learning backed by verified certifications. Click a card to view the certificate.</p>
@@ -398,7 +395,7 @@
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <span class="cert-year">2025</span>
+                        <span class="cert-year">2026</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">Belajar Dasar Pemrograman Python</h3>
                     <p class="text-sm text-zinc-400 leading-relaxed mb-4">Structured Python course covering fundamentals, data structures, and hands-on coding exercises.</p>
@@ -417,7 +414,7 @@
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <span class="cert-year">2025</span>
+                        <span class="cert-year">2026</span>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-1.5 group-hover:text-yellow-400 transition-colors">Belajar Dasar Pemrograman JavaScript</h3>
                     <p class="text-sm text-zinc-400 leading-relaxed mb-4">Structured JavaScript course covering language fundamentals and interactive web programming.</p>
@@ -433,10 +430,10 @@
         </div>
     </section>
 
-        <!-- Services -->
-    <section id="services" class="relative py-24 px-6">
+            <!-- Services -->
+    <section id="services" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">What I Do</p>
                 <h2 class="section-title">My <span class="accent">Services</span></h2>
                 <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Transforming ideas into powerful digital solutions with creativity and precision.</p>
@@ -470,10 +467,10 @@
         </div>
     </section>
 
-        <!-- Contact -->
-    <section id="contact" class="relative py-24 px-6">
+            <!-- Contact -->
+    <section id="contact" class="relative py-16 px-6 md:py-24">
         <div class="mx-auto max-w-6xl">
-            <div class="text-center mb-14">
+            <div class="text-center mb-10 md:mb-14">
                 <p class="eyebrow">Get In Touch</p>
                 <h2 class="section-title">Contact <span class="accent">Me</span></h2>
             </div>
@@ -502,7 +499,7 @@
                         </span>
                         <span>
                             <span class="block text-xs uppercase tracking-wider text-zinc-500">Location</span>
-                            <span class="block text-sm text-zinc-200">Indonesia</span>
+                            <span class="block text-sm text-zinc-200">Klaten, Indonesia</span>
                         </span>
                     </div>
 
@@ -521,15 +518,15 @@
                 <form id="contact-form" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8 space-y-5">
                     <div>
                         <label for="name" class="form-label">Your Name</label>
-                        <input id="name" name="name" type="text" required placeholder="John Doe" class="form-input" />
+                        <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name" class="form-input" />
                     </div>
                     <div>
                         <label for="email" class="form-label">Your Email</label>
-                        <input id="email" name="email" type="email" required placeholder="john@example.com" class="form-input" />
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com" class="form-input" />
                     </div>
                     <div>
                         <label for="message" class="form-label">Your Message</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
+                        <textarea id="message" name="message" rows="4" required autocomplete="off" placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
                     </div>
                     <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.45)]">
                         Send Message
@@ -539,6 +536,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
         <!-- Footer -->
     <footer class="relative border-t border-white/5 py-8 px-6">
