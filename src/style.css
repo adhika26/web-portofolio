@@ -593,6 +593,71 @@ body {
     box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.12);
 }
 
+/* ---------- CV dropdown ---------- */
+.cv-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.65rem);
+    z-index: 60;
+    width: 15rem;
+    padding: 0.5rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.97);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(250, 204, 21, 0.05);
+    transform-origin: top right;
+    animation: cvMenuIn 0.18s ease;
+}
+
+@keyframes cvMenuIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cv-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 0.75rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.cv-item:hover {
+    background: rgba(250, 204, 21, 0.08);
+}
+
+.cv-flag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 0.55rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #facc15;
+    background: rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.cv-chevron {
+    transition: transform 0.25s ease;
+}
+.cv-dropdown.is-open .cv-chevron {
+    transform: rotate(180deg);
+}
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
     opacity: 0;

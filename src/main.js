@@ -95,6 +95,53 @@ function initSkillFilter() {
     });
 }
 
+/* ---------- CV dropdown ---------- */
+function initCvDropdown() {
+    const dropdowns = document.querySelectorAll('[data-cv-dropdown]');
+
+    function closeDropdown(dropdown) {
+        const toggle = dropdown.querySelector('[data-cv-toggle]');
+        const menu = dropdown.querySelector('[data-cv-menu]');
+        dropdown.classList.remove('is-open');
+        toggle?.setAttribute('aria-expanded', 'false');
+        menu?.classList.add('hidden');
+    }
+
+    dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector('[data-cv-toggle]');
+        const menu = dropdown.querySelector('[data-cv-menu]');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isOpen = dropdown.classList.contains('is-open');
+
+            dropdowns.forEach((other) => closeDropdown(other));
+
+            if (!isOpen) {
+                dropdown.classList.add('is-open');
+                toggle.setAttribute('aria-expanded', 'true');
+                menu.classList.remove('hidden');
+            }
+        });
+
+        menu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => closeDropdown(dropdown));
+        });
+
+        dropdown.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeDropdown(dropdown);
+                toggle.focus();
+            }
+        });
+    });
+
+    document.addEventListener('click', () => {
+        dropdowns.forEach((dropdown) => closeDropdown(dropdown));
+    });
+}
+
 /* ---------- Contact form (mailto) ---------- */
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
@@ -151,6 +198,7 @@ function setYear() {
 /* ---------- Boot ---------- */
 initMobileMenu();
 initSkillFilter();
+initCvDropdown();
 initContactForm();
 initScrollReveal();
 setYear();
