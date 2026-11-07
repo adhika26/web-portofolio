@@ -4,16 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Adhika Dwiki Septian, Creative Web &amp; Fullstack Developer building sleek, interactive and modern web experiences." />
+    <meta name="author" content="Adhika Dwiki Septian" />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#050505" />
     <title>Adhika Dwiki Septian | Creative Web & Fullstack Developer</title>
+
+    <link rel="canonical" href="https://adhika26.github.io/web-portofolio/" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Adhika Dwiki Septian" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Adhika Dwiki Septian | Creative Web & Fullstack Developer" />
+    <meta property="og:description" content="Creative Web & Fullstack Developer building sleek, interactive and modern web experiences." />
+    <meta property="og:url" content="https://adhika26.github.io/web-portofolio/" />
+    <meta property="og:image" content="https://adhika26.github.io/web-portofolio/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Adhika Dwiki Septian — Creative Web & Fullstack Developer" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adhika Dwiki Septian | Creative Web & Fullstack Developer" />
+    <meta name="twitter:description" content="Creative Web & Fullstack Developer building sleek, interactive and modern web experiences." />
+    <meta name="twitter:image" content="https://adhika26.github.io/web-portofolio/og-image.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/web-portofolio/assets/index-DbPCl_My.js"></script>
-  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-CihPyrWS.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adhika Dwiki Septian",
+      "url": "https://adhika26.github.io/web-portofolio/",
+      "jobTitle": "Creative Web & Fullstack Developer",
+      "email": "mailto:adhikaseptian5@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Klaten",
+        "addressCountry": "ID"
+      },
+      "sameAs": [
+        "https://github.com/adhika26",
+        "https://www.linkedin.com/in/adhikads"
+      ]
+    }
+    </script>
+  <script type="module" crossorigin src="/web-portofolio/assets/index-Cb8Mnb0j.js"></script>
+  <link rel="stylesheet" crossorigin href="/web-portofolio/assets/index-BgI_1W9R.css">
 </head>
 <body class="antialiased selection:bg-yellow-400 selection:text-black">
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Setiap bagian halaman dipisah di src/sections/*.html dan di-inline saat build -->
         <!-- Latar belakang -->
@@ -22,7 +70,7 @@
     <div class="glow-orb glow-orb--two"></div>
 
         <!-- Navigasi -->
-    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
+    <nav id="navbar" aria-label="Main navigation" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
         <div class="flex justify-between items-center w-full">
             <a href="#home" class="text-lg font-bold tracking-tight text-white font-display">
                 adhika<span class="text-yellow-400">.</span>
@@ -48,14 +96,14 @@
                             <span class="cv-flag">ID</span>
                             <span>
                                 <span class="block text-sm font-medium text-zinc-100">Bahasa Indonesia</span>
-                                <span class="block text-[11px] text-zinc-500">Lihat CV</span>
+                                <span class="block text-[11px] text-zinc-400">Lihat CV</span>
                             </span>
                         </a>
                         <a href="./cv/cv-en.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">
                             <span class="cv-flag">EN</span>
                             <span>
                                 <span class="block text-sm font-medium text-zinc-100">English</span>
-                                <span class="block text-[11px] text-zinc-500">View CV</span>
+                                <span class="block text-[11px] text-zinc-400">View CV</span>
                             </span>
                         </a>
                     </div>
@@ -67,8 +115,13 @@
                 </a>
 
                 <!-- Tombol Mobile -->
-                <button id="mobile-btn" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false" class="flex h-11 w-11 -mr-2 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/5 hover:text-yellow-400 lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <button id="mobile-btn" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="flex h-11 w-11 -mr-2 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/5 hover:text-yellow-400 lg:hidden">
+                    <span id="mobile-icon-open" class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    </span>
+                    <span id="mobile-icon-close" class="hidden items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </span>
                 </button>
             </div>
         </div>
@@ -85,7 +138,7 @@
     </nav>
 
 
-    <main>
+    <main id="main-content">
             <!-- Hero -->
     <section id="home" class="relative min-h-screen flex items-center px-6 pt-28 pb-16 sm:pt-32 sm:pb-20">
         <div class="mx-auto w-full max-w-6xl grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -94,8 +147,8 @@
             <div class="order-2 md:order-1 flex justify-center">
                 <div class="relative w-full max-w-sm">
                     <div class="absolute inset-0 scale-110 bg-yellow-400/25 blur-[70px] rounded-full"></div>
-                    <div class="absolute -inset-4 rotate-3 rounded-[2rem] border border-yellow-400/40"></div>
-                    <div class="absolute -inset-6 -rotate-2 rounded-[2.5rem] border border-yellow-400/15"></div>
+                    <div class="absolute -inset-2 rotate-3 rounded-[2rem] border border-yellow-400/40 sm:-inset-4"></div>
+                    <div class="absolute -inset-3 -rotate-2 rounded-[2.5rem] border border-yellow-400/15 sm:-inset-6"></div>
                     <div class="hero-portrait relative overflow-hidden rounded-[1.75rem] border-2 border-yellow-400/70 bg-yellow-400 shadow-[0_0_60px_rgba(250,204,21,0.35)]">
                         <div class="portrait-grid"></div>
                         <span class="portrait-corner tl"></span>
@@ -128,7 +181,7 @@
                     I build sleek, interactive, and modern web applications that turn ideas into powerful digital experiences.
                 </p>
 
-                <p class="text-sm text-zinc-500 mb-8 h-6">
+                <p class="text-sm text-zinc-400 mb-8 h-6">
                     Currently crafting as a <span id="typed-text" class="text-yellow-400 font-medium"></span>
                 </p>
 
@@ -150,14 +203,14 @@
                                 <span class="cv-flag">ID</span>
                                 <span>
                                     <span class="block text-sm font-medium text-zinc-100">Bahasa Indonesia</span>
-                                    <span class="block text-[11px] text-zinc-500">Lihat CV</span>
+                                    <span class="block text-[11px] text-zinc-400">Lihat CV</span>
                                 </span>
                             </a>
                             <a href="./cv/cv-en.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">
                                 <span class="cv-flag">EN</span>
                                 <span>
                                     <span class="block text-sm font-medium text-zinc-100">English</span>
-                                    <span class="block text-[11px] text-zinc-500">View CV</span>
+                                    <span class="block text-[11px] text-zinc-400">View CV</span>
                                 </span>
                             </a>
                         </div>
@@ -233,7 +286,11 @@
                 <!-- Proyek 1 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/sistem-rekomendasi.png" alt="Tampilan EksplorJogja - Sistem Rekomendasi Wisata Yogyakarta" width="1280" height="800" loading="lazy" decoding="async" />
+                        <picture>
+                            <source type="image/avif" srcset="./projects/sistem-rekomendasi-640.avif 640w, ./projects/sistem-rekomendasi-1280.avif 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <source type="image/webp" srcset="./projects/sistem-rekomendasi-640.webp 640w, ./projects/sistem-rekomendasi-1280.webp 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <img src="./projects/sistem-rekomendasi.png" alt="Tampilan EksplorJogja - Sistem Rekomendasi Wisata Yogyakarta" width="1280" height="800" loading="lazy" decoding="async" />
+                        </picture>
                         <span class="thumb-year">2025 - 2026</span>
                         <span class="thumb-badge bg-blue-500/20 text-blue-300 border-blue-400/30">Web App</span>
                     </div>
@@ -269,7 +326,11 @@
                 <!-- Proyek 2 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/angkringan-pos.png" alt="Tampilan aplikasi Angkringan POS" width="1280" height="800" loading="lazy" decoding="async" />
+                        <picture>
+                            <source type="image/avif" srcset="./projects/angkringan-pos-640.avif 640w, ./projects/angkringan-pos-1280.avif 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <source type="image/webp" srcset="./projects/angkringan-pos-640.webp 640w, ./projects/angkringan-pos-1280.webp 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <img src="./projects/angkringan-pos.png" alt="Tampilan aplikasi Angkringan POS" width="1280" height="800" loading="lazy" decoding="async" />
+                        </picture>
                         <span class="thumb-year">2026</span>
                         <span class="thumb-badge bg-emerald-500/20 text-emerald-300 border-emerald-400/30">Web App</span>
                     </div>
@@ -305,7 +366,11 @@
                 <!-- Proyek 3 -->
                 <article class="project-card group">
                     <div class="project-media">
-                        <img src="./projects/angkringan-east-revamp.png" alt="Tampilan hero landing page Angkringan East Corner versi revamp" width="1280" height="800" loading="lazy" decoding="async" />
+                        <picture>
+                            <source type="image/avif" srcset="./projects/angkringan-east-revamp-640.avif 640w, ./projects/angkringan-east-revamp-1280.avif 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <source type="image/webp" srcset="./projects/angkringan-east-revamp-640.webp 640w, ./projects/angkringan-east-revamp-1280.webp 1280w" sizes="(min-width: 1024px) 368px, (min-width: 768px) 45vw, 92vw" />
+                            <img src="./projects/angkringan-east-revamp.png" alt="Tampilan hero landing page Angkringan East Corner versi revamp" width="1280" height="800" loading="lazy" decoding="async" />
+                        </picture>
                         <span class="thumb-year">2026</span>
                         <span class="thumb-badge bg-orange-500/20 text-orange-300 border-orange-400/30">Landing</span>
                     </div>
@@ -352,7 +417,7 @@
 
             <div class="grid md:grid-cols-2 gap-5">
                 <!-- Certificate 1 -->
-                <a href="./certificates/PythonEssentials1Update20261026-20-tg6lws.pdf" target="_blank" rel="noopener" class="cert-card group">
+                <a href="./certificates/PythonEssentials1Update20261026-20-tg6lws.pdf" target="_blank" rel="noopener noreferrer" class="cert-card group">
                     <div class="cert-top">
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
@@ -371,7 +436,7 @@
                 </a>
 
                 <!-- Certificate 2 -->
-                <a href="./certificates/JavaScriptEssentials1Update20261026-20-s7i95m.pdf" target="_blank" rel="noopener" class="cert-card group">
+                <a href="./certificates/JavaScriptEssentials1Update20261026-20-s7i95m.pdf" target="_blank" rel="noopener noreferrer" class="cert-card group">
                     <div class="cert-top">
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
@@ -390,7 +455,7 @@
                 </a>
 
                 <!-- Certificate 3 -->
-                <a href="./certificates/sertifikat_course_dicoding_Adhika_pyhton.pdf" target="_blank" rel="noopener" class="cert-card group">
+                <a href="./certificates/sertifikat_course_dicoding_Adhika_pyhton.pdf" target="_blank" rel="noopener noreferrer" class="cert-card group">
                     <div class="cert-top">
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -409,7 +474,7 @@
                 </a>
 
                 <!-- Certificate 4 -->
-                <a href="./certificates/sertifikat_course_dicoding_Adhika_javascript.pdf" target="_blank" rel="noopener" class="cert-card group">
+                <a href="./certificates/sertifikat_course_dicoding_Adhika_javascript.pdf" target="_blank" rel="noopener noreferrer" class="cert-card group">
                     <div class="cert-top">
                         <div class="cert-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -477,9 +542,9 @@
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Info -->
-                <div class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8">
+                <div class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-5 sm:p-8">
                     <h3 class="text-xl font-bold text-white mb-3">Let's build something great together.</h3>
-                    <p class="text-sm text-zinc-400 leading-relaxed mb-8">
+                    <p lang="id" class="text-sm text-zinc-400 leading-relaxed mb-8">
                         Saya terbuka untuk peluang kerja baru, diskusi seputar teknologi, atau kolaborasi proyek. Jangan ragu untuk menghubungi saya!
                     </p>
 
@@ -488,8 +553,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                         </span>
                         <span>
-                            <span class="block text-xs uppercase tracking-wider text-zinc-500">Email</span>
-                            <span class="block text-sm text-zinc-200 group-hover:text-yellow-400 transition-colors">adhikaseptian5@gmail.com</span>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-400">Email</span>
+                            <span class="block break-all text-sm text-zinc-200 group-hover:text-yellow-400 transition-colors">adhikaseptian5@gmail.com</span>
                         </span>
                     </a>
 
@@ -498,7 +563,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </span>
                         <span>
-                            <span class="block text-xs uppercase tracking-wider text-zinc-500">Location</span>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-400">Location</span>
                             <span class="block text-sm text-zinc-200">Klaten, Indonesia</span>
                         </span>
                     </div>
@@ -508,8 +573,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.51 11.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
                         </span>
                         <span>
-                            <span class="block text-xs uppercase tracking-wider text-zinc-500">GitHub</span>
-                            <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="block text-sm text-zinc-200 hover:text-yellow-400 transition-colors">github.com/adhika26</a>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-400">GitHub</span>
+                            <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="block break-all text-sm text-zinc-200 hover:text-yellow-400 transition-colors">github.com/adhika26</a>
                         </span>
                     </div>
 
@@ -522,30 +587,57 @@
                             </svg>
                         </span>
                         <span>
-                            <span class="block text-xs uppercase tracking-wider text-zinc-500">LinkedIn</span>
-                            <a href="https://www.linkedin.com/in/adhikads" target="_blank" rel="noopener noreferrer" class="block text-sm text-zinc-200 hover:text-yellow-400 transition-colors">linkedin.com/in/adhikads</a>
+                            <span class="block text-xs uppercase tracking-wider text-zinc-400">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/adhikads" target="_blank" rel="noopener noreferrer" class="block break-all text-sm text-zinc-200 hover:text-yellow-400 transition-colors">linkedin.com/in/adhikads</a>
                         </span>
                     </div>
                 </div>
 
                 <!-- Form -->
-                <form id="contact-form" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-8 space-y-5">
+                <form id="contact-form" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-5 sm:p-8 space-y-5" novalidate>
                     <div>
                         <label for="name" class="form-label">Your Name</label>
-                        <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name" class="form-input" />
+                        <input id="name" name="name" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Your name" class="form-input" aria-describedby="name-error" />
+                        <p id="name-error" class="form-error" hidden></p>
                     </div>
                     <div>
                         <label for="email" class="form-label">Your Email</label>
-                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com" class="form-input" />
+                        <input id="email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="you@email.com" class="form-input" aria-describedby="email-error" />
+                        <p id="email-error" class="form-error" hidden></p>
                     </div>
                     <div>
                         <label for="message" class="form-label">Your Message</label>
-                        <textarea id="message" name="message" rows="4" required autocomplete="off" placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
+                        <textarea id="message" name="message" rows="4" required minlength="10" maxlength="2000" autocomplete="off" placeholder="Tell me about your project..." class="form-input resize-none" aria-describedby="message-error message-count"></textarea>
+                        <div class="mt-2 flex items-center justify-between gap-3">
+                            <p id="message-error" class="form-error" hidden></p>
+                            <span id="message-count" class="form-hint ml-auto">0 / 2000</span>
+                        </div>
                     </div>
+
                     <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-6 py-3.5 text-sm font-semibold text-black transition-all hover:bg-yellow-300 hover:shadow-[0_0_30px_rgba(250,204,21,0.45)]">
                         Send Message
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </button>
+
+                    <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+
+                    <div id="mail-fallback" class="form-fallback" hidden>
+                        <p class="text-sm text-zinc-300">
+                            Aplikasi email Anda seharusnya sudah terbuka. Jika tidak, buka email app atau salin pesan di bawah ini.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <a id="mailto-link" href="mailto:adhikaseptian5@gmail.com" class="inline-flex min-h-11 items-center justify-center rounded-full bg-yellow-400 px-4 py-2 text-xs font-semibold text-black transition-colors hover:bg-yellow-300">
+                                Open email app
+                            </a>
+                            <button id="copy-message" type="button" class="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-700 px-4 py-2 text-xs font-semibold text-zinc-200 transition-colors hover:border-yellow-400 hover:text-yellow-400">
+                                Copy message
+                            </button>
+                        </div>
+                        <p class="mt-3 text-xs text-zinc-400">
+                            Atau kirim manual ke
+                            <a href="mailto:adhikaseptian5@gmail.com" class="text-yellow-400 underline underline-offset-2">adhikaseptian5@gmail.com</a>.
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -555,7 +647,7 @@
 
         <!-- Footer -->
     <footer class="relative border-t border-white/5 py-8 px-6">
-        <div class="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+        <div class="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
             <p>&copy; <span id="year">2026</span> Adhika Dwiki Septian. All rights reserved.</p>
             <div class="flex items-center gap-5">
                 <a href="https://github.com/adhika26" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">GitHub</a>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adhika26.github.io/web-portofolio/sitemap.xml
