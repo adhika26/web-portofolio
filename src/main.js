@@ -49,30 +49,33 @@ function initMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navbar = document.getElementById('navbar');
     const mobileLinks = document.querySelectorAll('.mobile-link');
+    const iconOpen = document.getElementById('mobile-icon-open');
+    const iconClose = document.getElementById('mobile-icon-close');
+
+    function setMenuState(isOpen) {
+        if (!mobileMenu || !navbar) return;
+
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        mobileMenu.classList.toggle('flex', isOpen);
+        navbar.classList.toggle('rounded-full', !isOpen);
+        navbar.classList.toggle('rounded-2xl', isOpen);
+
+        if (!mobileBtn) return;
+        mobileBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+
+        iconOpen?.classList.toggle('hidden', isOpen);
+        iconOpen?.classList.toggle('flex', !isOpen);
+        iconClose?.classList.toggle('hidden', !isOpen);
+        iconClose?.classList.toggle('flex', isOpen);
+    }
 
     function closeMobileMenu() {
-        if (!mobileMenu || !navbar) return;
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-        navbar.classList.add('rounded-full');
-        navbar.classList.remove('rounded-2xl');
-        mobileBtn?.setAttribute('aria-expanded', 'false');
+        setMenuState(false);
     }
 
     mobileBtn?.addEventListener('click', () => {
-        if (!mobileMenu || !navbar) return;
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-
-        if (mobileMenu.classList.contains('flex')) {
-            navbar.classList.remove('rounded-full');
-            navbar.classList.add('rounded-2xl');
-            mobileBtn.setAttribute('aria-expanded', 'true');
-        } else {
-            navbar.classList.add('rounded-full');
-            navbar.classList.remove('rounded-2xl');
-            mobileBtn.setAttribute('aria-expanded', 'false');
-        }
+        setMenuState(!mobileMenu?.classList.contains('flex'));
     });
 
     mobileLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
@@ -162,22 +165,159 @@ function initCvDropdown() {
     });
 }
 
-/* ---------- Contact form (mailto) ---------- */
+/* ---------- Contact form (validated mailto + fallback) ---------- */
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
 
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const statusEl = document.getElementById('form-status');
+    const fallbackEl = document.getElementById('mail-fallback');
+    const mailtoLink = document.getElementById('mailto-link');
+    const copyButton = document.getElementById('copy-message');
+    const messageCount = document.getElementById('message-count');
+
+    if (!nameInput || !emailInput || !messageInput) return;
+
+    const fields = { name: nameInput, email: emailInput, message: messageInput };
+    const errors = {
+        name: document.getElementById('name-error'),
+        email: document.getElementById('email-error'),
+        message: document.getElementById('message-error'),
+    };
+
+    const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+
+    const rules = {
+        name(value) {
+            if (!value) return 'Nama wajib diisi.';
+            if (value.length < 2) return 'Nama minimal 2 karakter.';
+            if (value.length > 100) return 'Nama maksimal 100 karakter.';
+            return '';
+        },
+        email(value) {
+            if (!value) return 'Email wajib diisi.';
+            if (value.length > 254) return 'Email maksimal 254 karakter.';
+            if (/\s/.test(value) || value.includes('..')) return 'Format email tidak valid.';
+            if (!EMAIL_PATTERN.test(value)) return 'Gunakan format email yang valid, contoh: nama@email.com.';
+            return '';
+        },
+        message(value) {
+            if (!value) return 'Pesan wajib diisi.';
+            if (value.length < 10) return 'Pesan minimal 10 karakter.';
+            if (value.length > 2000) return 'Pesan maksimal 2000 karakter.';
+            return '';
+        },
+    };
+
+    function setError(key, message) {
+        const input = fields[key];
+        const errorEl = errors[key];
+        if (!input || !errorEl) return;
+
+        input.setAttribute('aria-invalid', message ? 'true' : 'false');
+        errorEl.textContent = message;
+        errorEl.hidden = !message;
+    }
+
+    function validateField(key) {
+        const value = fields[key].value.trim();
+        const message = rules[key](value);
+        setError(key, message);
+        return !message;
+    }
+
+    function validateAll() {
+        const results = Object.keys(fields).map(validateField);
+        return results.every(Boolean);
+    }
+
+    function updateMessageCount() {
+        if (!messageCount) return;
+        messageCount.textContent = `${messageInput.value.length} / 2000`;
+    }
+
+    function setStatus(message, type) {
+        if (!statusEl) return;
+        statusEl.textContent = message;
+        statusEl.hidden = !message;
+        statusEl.classList.toggle('is-error', type === 'error');
+        statusEl.classList.toggle('is-success', type === 'success');
+    }
+
+    async function copyText(text) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch {
+            const helper = document.createElement('textarea');
+            helper.value = text;
+            helper.setAttribute('readonly', '');
+            helper.style.position = 'fixed';
+            helper.style.opacity = '0';
+            document.body.appendChild(helper);
+            helper.select();
+            const copied = document.execCommand('copy');
+            helper.remove();
+            return copied;
+        }
+    }
+
+    Object.entries(fields).forEach(([key, input]) => {
+        input.addEventListener('input', () => {
+            if (key === 'message') updateMessageCount();
+            if (input.getAttribute('aria-invalid') === 'true') validateField(key);
+        });
+
+        input.addEventListener('blur', () => {
+            if (input.value.trim()) validateField(key);
+        });
+    });
+
+    updateMessageCount();
+
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        setStatus('', null);
+        if (fallbackEl) fallbackEl.hidden = true;
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
+        if (!validateAll()) {
+            const firstInvalid = Object.keys(fields).find(
+                (key) => fields[key].getAttribute('aria-invalid') === 'true'
+            );
+            setStatus('Form belum valid. Periksa kolom yang ditandai.', 'error');
+            fields[firstInvalid]?.focus();
+            return;
+        }
 
-        const subject = encodeURIComponent(`Portfolio contact from ${name || 'someone'}`);
-        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        const name = nameInput.value.trim().replace(/\s+/g, ' ');
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+        const subject = `Portfolio contact from ${name}`;
+        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailto = `mailto:adhikaseptian5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-        window.location.href = `mailto:adhikaseptian5@gmail.com?subject=${subject}&body=${body}`;
+        if (mailtoLink) mailtoLink.href = mailto;
+        if (copyButton) {
+            copyButton.dataset.message = `To: adhikaseptian5@gmail.com\nSubject: ${subject}\n\n${body}`;
+        }
+
+        window.location.href = mailto;
+        setStatus('Pesan siap dikirim. Aplikasi email Anda seharusnya sudah terbuka.', 'success');
+        if (fallbackEl) fallbackEl.hidden = false;
+    });
+
+    copyButton?.addEventListener('click', async () => {
+        const text = copyButton.dataset.message || '';
+        if (!text) return;
+
+        const copied = await copyText(text);
+        copyButton.textContent = copied ? 'Copied!' : 'Copy failed';
+        window.setTimeout(() => {
+            copyButton.textContent = 'Copy message';
+        }, 2000);
     });
 }
 

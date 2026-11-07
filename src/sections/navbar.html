@@ -1,5 +1,5 @@
     <!-- Navigasi -->
-    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
+    <nav id="navbar" aria-label="Main navigation" class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl bg-[#0c0c0c]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 z-50 shadow-[0_8px_40px_rgba(0,0,0,0.6)] transition-all duration-300">
         <div class="flex justify-between items-center w-full">
             <a href="#home" class="text-lg font-bold tracking-tight text-white font-display">
                 adhika<span class="text-yellow-400">.</span>
@@ -25,14 +25,14 @@
                             <span class="cv-flag">ID</span>
                             <span>
                                 <span class="block text-sm font-medium text-zinc-100">Bahasa Indonesia</span>
-                                <span class="block text-[11px] text-zinc-500">Lihat CV</span>
+                                <span class="block text-[11px] text-zinc-400">Lihat CV</span>
                             </span>
                         </a>
                         <a href="./cv/cv-en.pdf" target="_blank" rel="noopener noreferrer" class="cv-item">
                             <span class="cv-flag">EN</span>
                             <span>
                                 <span class="block text-sm font-medium text-zinc-100">English</span>
-                                <span class="block text-[11px] text-zinc-500">View CV</span>
+                                <span class="block text-[11px] text-zinc-400">View CV</span>
                             </span>
                         </a>
                     </div>
@@ -44,8 +44,13 @@
                 </a>
 
                 <!-- Tombol Mobile -->
-                <button id="mobile-btn" type="button" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false" class="flex h-11 w-11 -mr-2 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/5 hover:text-yellow-400 lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <button id="mobile-btn" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" class="flex h-11 w-11 -mr-2 items-center justify-center rounded-full text-zinc-300 transition-colors hover:bg-white/5 hover:text-yellow-400 lg:hidden">
+                    <span id="mobile-icon-open" class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    </span>
+                    <span id="mobile-icon-close" class="hidden items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </span>
                 </button>
             </div>
         </div>
