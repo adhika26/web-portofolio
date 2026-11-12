@@ -7,7 +7,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const projectsDir = resolve(root, 'public/projects');
 const publicDir = resolve(root, 'public');
 
-const projects = ['sistem-rekomendasi', 'angkringan-pos', 'angkringan-east-revamp', 'gym-assistant'];
+const projects = ['sistem-rekomendasi', 'angkringan-pos', 'angkringan-east-revamp', 'gym-assistant', 'nurulhusna-web'];
 const widths = [640, 1280];
 
 await mkdir(projectsDir, { recursive: true });
